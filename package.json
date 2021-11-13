@@ -1,0 +1,13 @@
+{
+  "name": "zig-node-native-module",
+  "version": "1.0.0",
+  "description": "Example of a Node.js module written in Zig",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist && ZIG_SYSTEM_LINKER_HACK=1 zig build-lib -mcpu=baseline -OReleaseSmall -dynamic -lc -isystem deps/node-$(node --version)/include/node src/lib.zig -fallow-shlib-undefined -femit-bin=dist/lib.node",
+    "test": "node test.js",
+    "postinstall": "./download-node-headers.sh"
+  },
+  "author": "Andre 'Staltz' Medeiros <contact@staltz.com>",
+  "license": "Unlicense"
+}
