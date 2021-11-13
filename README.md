@@ -13,6 +13,10 @@ Test this project like this:
 3. `npm run build` (will compile the Zig project and produce `dist/lib.node`)
 4. `npm run test` (will call the `greet()` function from Zig)
 
+## Why Zig?
+
+Writing C/C++ in 2021 is difficult, confusing, verbose, antiquated. (Disclaimer: I have written many thousands lines of code of C/C++ in my lifetime, I know what I'm talking about) But writing native Node.js modules is a superpower for achieving better performance. I've been hyped about using Rust for Node.js native modules, but my [experience in practice has been full of obstacles](https://staltz.com/rust-for-mobile-not-yet.html). Now, I'm giving Zig a try. It can produce small binaries with great performance, it builds for all targets I can imagine (out of the box), and is overall a simple and approachable language built for the year 2021. It certainly feels like a young language, but let's test it out, I guess.
+
 ## License and acknowledgements
 
 Code here is licensed `Unlicense`, except for `src/translate.zig` which was copied from [Tigerbeetle-node](https://github.com/coilhq/tigerbeetle-node) and is licensed Apache-2.0 by Coil Technologies, Inc.
