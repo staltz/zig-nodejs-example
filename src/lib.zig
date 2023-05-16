@@ -4,6 +4,7 @@ const c = @import("c.zig");
 const translate = @import("translate.zig");
 
 export fn napi_register_module_v1(env: c.napi_env, exports: c.napi_value) c.napi_value {
+    _ = info;
     translate.register_function(env, exports, "greet", greet) catch return null;
     return exports;
 }
