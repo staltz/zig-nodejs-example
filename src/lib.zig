@@ -9,5 +9,6 @@ export fn napi_register_module_v1(env: c.napi_env, exports: c.napi_value) c.napi
 }
 
 fn greet(env: c.napi_env, info: c.napi_callback_info) callconv(.C) c.napi_value {
+    _ = info;
     return translate.create_string(env, "world") catch return null;
 }
